@@ -1,0 +1,25 @@
+<form [formGroup]="userProfileForm" (ngSubmit)="onSave()">
+
+    <img src="{{superman?.avatar}}"/>
+    <label for="firstname">Firstname: </label>
+    <input id="firstname" type="text" formControlName="firstname">
+
+    <label for="lastname">Lastname: </label>
+    <input id="lastname" type="text" formControlName="lastname">
+
+    <label for="email">Email: </label>
+    <input id="email" type="text" formControlName="email">
+
+    <label for="username">Username: </label>
+    <input id="username" type="text" formControlName="username">
+
+    <label for="password">Password: </label>
+    <input id="password" type="password" formControlName="password">
+
+    <label for="age">Age: </label>
+    <input id="age" type="text" formControlName="age">
+
+    <button type="submit" [disabled]="!userProfileForm.valid">
+        <a [routerLink]="[superman?.id]">Save</a>
+    </button>
+</form>

@@ -1,0 +1,5 @@
+<ul>
+    @for(user of users; track user.id) {
+        <app-user [superman]="user" (updateSuperman)="updateUser($event)"></app-user>
+    }
+</ul>

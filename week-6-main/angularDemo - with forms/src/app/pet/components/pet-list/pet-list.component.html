@@ -1,0 +1,7 @@
+<ul>
+    @for (pet of pets; track pet.id) {
+        <li>
+            <app-single-pet [petToDisplay]="pet" (increaseStatus)="updateStatus($event)"></app-single-pet>
+        </li>
+    }
+</ul>
